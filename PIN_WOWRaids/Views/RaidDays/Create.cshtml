@@ -1,0 +1,43 @@
+﻿@model PIN_WOWRaids.Models.RaidDays
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>RaidDays</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="RaidName" class="control-label"></label>
+                <input asp-for="RaidName" class="form-control" />
+                <span asp-validation-for="RaidName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RaidDate" class="control-label"></label>
+                <input asp-for="RaidDate" class="form-control" />
+                <span asp-validation-for="RaidDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PeopleAttended" class="control-label"></label>
+                <input asp-for="PeopleAttended" class="form-control" />
+                <span asp-validation-for="PeopleAttended" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

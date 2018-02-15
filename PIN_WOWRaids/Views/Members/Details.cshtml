@@ -1,0 +1,30 @@
+﻿@model PIN_WOWRaids.Models.Member
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NickName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NickName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumAttended)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumAttended)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
