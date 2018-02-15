@@ -48,7 +48,7 @@ namespace PIN_WOWRaids
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=RaidDays}/{action=Index}/{id?}");
             });
         }
     }
