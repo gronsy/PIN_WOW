@@ -53,7 +53,7 @@ namespace PIN_WOWRaids.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NickName,NumAttended")] Member member)
+        public async Task<IActionResult> Create([Bind("Id,NickName,NumAttended,MainSpec,MainRole,OffSpec,OffRole")] Member member)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace PIN_WOWRaids.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Id,NickName,NumAttended")] Member member)
+        public async Task<IActionResult> Edit(string id, [Bind("Id,NickName,NumAttended,MainSpec,MainRole,OffSpec,OffRole")] Member member)
         {
             if (id != member.Id)
             {

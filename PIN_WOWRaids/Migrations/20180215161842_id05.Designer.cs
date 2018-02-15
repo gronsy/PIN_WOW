@@ -10,9 +10,10 @@ using System;
 namespace PIN_WOWRaids.Migrations
 {
     [DbContext(typeof(PIN_WOWRaidsContext))]
-    partial class PIN_WOWRaidsContextModelSnapshot : ModelSnapshot
+    [Migration("20180215161842_id05")]
+    partial class id05
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

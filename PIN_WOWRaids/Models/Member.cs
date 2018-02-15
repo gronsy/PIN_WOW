@@ -10,5 +10,9 @@ namespace PIN_WOWRaids.Models
         public String Id { set; get; }
         public String NickName { set; get; }
         public String NumAttended { set; get; }
+        public String MainSpec { get; set; }
+        public String MainRole { get; set; }
+        public String OffSpec { get; set; }
+        public String OffRole { get; set; }
     }
 }
