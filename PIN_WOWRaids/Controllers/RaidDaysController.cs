@@ -21,7 +21,10 @@ namespace PIN_WOWRaids.Controllers
         // GET: RaidDays
         public async Task<IActionResult> Index()
         {
-            return View(await _context.RaidDays.ToListAsync());
+            var raidDays = from s in _context.RaidDays select s;
+            raidDays = raidDays.OrderByDescending(s => s.RaidDate);
+
+            return View(raidDays.ToList());
         }
 
         // GET: RaidDays/Details/5
