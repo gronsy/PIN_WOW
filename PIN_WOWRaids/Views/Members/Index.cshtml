@@ -1,65 +1,75 @@
 ﻿@model IEnumerable<PIN_WOWRaids.Models.Member>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Members";
 }
-
-<h2>Index</h2>
+<link href="@Url.Content("~/css/members.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/css/main.css")" rel="stylesheet" type="text/css" />
+<h2>Members</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="txt_color">Create New</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.NickName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.NumAttended)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MainSpec)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MainRole)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.OffSpec)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.OffRole)
-                </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NickName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NumAttended)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MainSpec)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MainRole)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OffSpec)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.OffRole)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<body class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+    <div class="container">
+        <div class="row">
+            <div class="table_border">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NickName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.NumAttended)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MainSpec)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.MainRole)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.OffSpec)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.OffRole)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NickName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NumAttended)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MainSpec)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MainRole)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OffSpec)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OffRole)
+                                </td>
+                                <td class="admin_func">
+                                    <a asp-action="Edit" asp-route-id="@item.Id" class="txt_color">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@item.Id" class="txt_color">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@item.Id" class="txt_color">Delete</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

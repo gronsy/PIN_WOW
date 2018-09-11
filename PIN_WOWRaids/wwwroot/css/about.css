@@ -1,0 +1,33 @@
+﻿body, #wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+}
+
+#info {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin-right: 50%;
+}
+
+#img {
+    content: url(../images/About/ashbringer.png);
+    background-size: cover;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    background-repeat: no-repeat;
+    max-height: 100%;
+    max-width:100%;
+    margin-left:25%;
+}
+
+.list_scale:hover {
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+}
